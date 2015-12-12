@@ -1,0 +1,66 @@
+<style>
+  
+.container{
+  padding-top: 10px
+}
+
+.table{
+  background-color: silver;
+}
+
+</style>
+<div class="container">
+<div class="col-md-offset-2 col-md-8">
+<div class="panel panel-default">
+<div class="panel-heading">
+  <h1>
+    Previous destinations
+  </h1>
+  
+  
+  
+  <a href="/previous_destinations/new" class="btn btn-lg btn-success">New previous destination</a>
+    <a href="/preferences" class="btn btn-lg btn-success">I'm done here, I want to indicate my preferences</a>
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="panel-body">
+  <div class="col-md-offset-2 col-md-8">
+    <table class="table table-striped table-hover">
+      <tr>
+
+        <th>Country</th>
+
+        <th>Destination name</th>
+
+        <th>Destination type</th>
+
+        <th>Actions</th>
+      </tr>
+
+      <% @previous_destinations.each do |previous_destination| %>
+      <tr>
+
+        <td><%= previous_destination.country %></td>
+
+        <td><%= previous_destination.destination_name %></td>
+
+        <td><%= previous_destination.destination_type %></td>
+
+        <td>
+
+          <a href="/previous_destinations/<%= previous_destination.id %>" class="btn btn-primary">Show</a>
+          <a href="/previous_destinations/<%= previous_destination.id %>/edit" class="btn btn-warning">Edit</a>
+          <a href="/delete_previous_destination/<%= previous_destination.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+
+        </td>
+      </tr>
+      </div>
+      <% end %>
+    </table>
+  </div>
+</div>
+</div>
+

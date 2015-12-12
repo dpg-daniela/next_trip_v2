@@ -1,0 +1,74 @@
+<style>
+body{
+	padding-top: 100px;
+   	padding-bottom: 60px
+}
+
+img{
+	border-radius: 12px
+}
+
+
+h3{
+	padding-top: 30px;
+	padding-bottom: 20px;
+	text-align: center;
+}
+
+.row{
+	text-align: center;
+}
+
+h5{
+	padding-bottom: 50px;
+	
+}
+
+.panel-default{
+	padding-left: 60px;
+	padding-bottom: 40px;
+	border-radius: 50px
+}
+
+</style>
+
+<body>
+<div class="container">
+<div class="col-md-12">
+<div class="panel panel-default">
+
+    <div class="row">
+        <div class="col-md-12">
+        
+<h3>These are our recommendations for your next cultural destination: 
+</h3>
+<h5>(click on pictures for more information)</h5>
+</div>
+</div>
+
+    <div class="row">
+        <div class="col-md-3">
+
+
+<h4><%= @suggestion1_name %></h4>
+
+<a href="https://www.google.com/search?q=<%= @suggestion1_name %>&rlz=1C1CHFX_enUS605US605&oq=<%= @suggestion1_name %>&aqs=chrome..69i57j0l5.953j0j7&sourceid=chrome&es_sm=93&ie=UTF-8"><img height="200" width="250" src="<%= @suggestion1_photo %>"></a>
+
+</div>
+
+<div class="col-md-offset-1 col-md-3">
+<h4><%= @suggestion2_name %></h4>
+
+<a href="https://www.google.com/search?q=<%= @suggestion2_name %>&rlz=1C1CHFX_enUS605US605&oq=<%= @suggestion2_name %>&aqs=chrome..69i57j0l5.953j0j7&sourceid=chrome&es_sm=93&ie=UTF-8"><img height="200" width="250" src="<%= @suggestion2_photo %>"></div></a>
+
+<div class="col-md-offset-1 col-md-3">
+<h4><%= @suggestion3_name %></h4>
+
+<a href="https://www.google.com/search?q=<%= @suggestion3_name %>&rlz=1C1CHFX_enUS605US605&oq=<%= @suggestion3_name %>&aqs=chrome..69i57j0l5.953j0j7&sourceid=chrome&es_sm=93&ie=UTF-8"><img height="200" width="250" src="<%= @suggestion3_photo %>"></div></a>
+
+</div>
+</div>
+</div>
+</div>
+
+</body>

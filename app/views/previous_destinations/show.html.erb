@@ -1,0 +1,41 @@
+<div class="page-header">
+  <h3>Previous Destination #<%= @previous_destination.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <dl class="dl-horizontal">
+
+      <dt>Country</dt>
+      <dd><%= @previous_destination.country %></dd>
+
+
+      <dt>Destination name</dt>
+      <dd><%= @previous_destination.destination_name %></dd>
+
+
+      <dt>Destination type</dt>
+      <dd><%= @previous_destination.destination_type %></dd>
+
+
+      <dt>User</dt>
+      <dd><%= @previous_destination.user_id %></dd>
+
+
+    </dl>
+
+    <div class="btn-group btn-group-justified">
+
+      <a href="/previous_destinations" class="btn btn-primary">
+        Back
+      </a>
+      <a href="/previous_destinations/<%= @previous_destination.id %>/edit" class="btn btn-warning">
+        Edit
+      </a>
+      <a href="/delete_previous_destination/<%= @previous_destination.id %>" class="btn btn-danger" rel="nofollow">
+        Delete
+      </a>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,133 @@
+<!-- Validation failure messages -->
+<% if @destination.errors.any? %>
+  <% @destination.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="page-header">
+  <h3>Edit Destination #<%= @destination.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+
+    <form action="/update_destination/<%= @destination.id %>" method="post">
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+
+
+      <!-- Label and input for country -->
+
+      <div class="form-group">
+        <label for="country" class="control-label">
+          Country
+        </label>
+
+
+        <input type="text" id="country" name="country" placeholder="Country" class="form-control" value="<%= @destination.country %>">
+
+      </div>
+
+
+
+      <!-- Label and input for destination_type -->
+
+      <div class="form-group">
+        <label for="destination_type" class="control-label">
+          Destination type
+        </label>
+
+
+        <input type="text" id="destination_type" name="destination_type" placeholder="Destination type" class="form-control" value="<%= @destination.destination_type %>">
+
+      </div>
+
+
+
+      <!-- Label and input for destination_name -->
+
+      <div class="form-group">
+        <label for="destination_name" class="control-label">
+          Destination name
+        </label>
+
+
+        <input type="text" id="destination_name" name="destination_name" placeholder="Destination name" class="form-control" value="<%= @destination.destination_name %>">
+
+      </div>
+
+
+
+      <!-- Label and input for image1 -->
+
+      <div class="form-group">
+        <label for="image1" class="control-label">
+          Image1
+        </label>
+
+
+        <input type="text" id="image1" name="image1" placeholder="Image1" class="form-control" value="<%= @destination.image1 %>">
+
+      </div>
+
+
+
+      <!-- Label and input for image2 -->
+
+      <div class="form-group">
+        <label for="image2" class="control-label">
+          Image2
+        </label>
+
+
+        <input type="text" id="image2" name="image2" placeholder="Image2" class="form-control" value="<%= @destination.image2 %>">
+
+      </div>
+
+
+
+      <!-- Label and input for image3 -->
+
+      <div class="form-group">
+        <label for="image3" class="control-label">
+          Image3
+        </label>
+
+
+        <input type="text" id="image3" name="image3" placeholder="Image3" class="form-control" value="<%= @destination.image3 %>">
+
+      </div>
+
+
+
+      <!-- Label and input for image4 -->
+
+      <div class="form-group">
+        <label for="image4" class="control-label">
+          Image4
+        </label>
+
+
+        <input type="text" id="image4" name="image4" placeholder="Image4" class="form-control" value="<%= @destination.image4 %>">
+
+      </div>
+
+
+
+      <button class="btn btn-warning">
+        Update Destination
+      </button>
+      or
+
+      <a href="/destinations/<%= @destination.id %>">Cancel</a>
+
+
+    </form>
+
+  </div>
+</div>
